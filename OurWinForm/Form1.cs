@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace OurWinForm
 {
+
+
     public partial class Form1 : Form
     {
+        TransportData.Service1Client client;
+
         public Form1()
         {
             InitializeComponent();
+            client = new TransportData.Service1Client();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           client.GetData(textBox1.Text);
+           client.GetData(textBox2.Text);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -3,6 +3,7 @@ namespace SaveData
 {
     partial class Service1
     {
+     
         /// <summary> 
         /// Required designer variable.
         /// </summary>

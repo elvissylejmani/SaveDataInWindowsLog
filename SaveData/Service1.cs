@@ -8,6 +8,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 using WcfServiceLibrary;
+using System.ServiceModel;
 
 namespace SaveData
 {
@@ -17,14 +18,20 @@ namespace SaveData
         {
             InitializeComponent();
         }
-
+     
         protected override void OnStart(string[] args)
         {
-
+            System.Diagnostics.Debugger.Launch();
         }
 
         protected override void OnStop()
         {
+        }
+        internal void TestStartupAndStop(string[] args)
+        {
+            this.OnStart(args);
+            Console.ReadLine();
+            this.OnStop();
         }
     }
 }
