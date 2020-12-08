@@ -79,10 +79,10 @@ namespace OurWinForm.TransportData {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(string value);
+        string GetData(string input1, string input2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(string value);
+        System.Threading.Tasks.Task<string> GetDataAsync(string input1, string input2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         OurWinForm.TransportData.CompositeType GetDataUsingDataContract(OurWinForm.TransportData.CompositeType composite);
@@ -118,12 +118,12 @@ namespace OurWinForm.TransportData {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(string value) {
-            return base.Channel.GetData(value);
+        public string GetData(string input1, string input2) {
+            return base.Channel.GetData(input1, input2);
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(string value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<string> GetDataAsync(string input1, string input2) {
+            return base.Channel.GetDataAsync(input1, input2);
         }
         
         public OurWinForm.TransportData.CompositeType GetDataUsingDataContract(OurWinForm.TransportData.CompositeType composite) {

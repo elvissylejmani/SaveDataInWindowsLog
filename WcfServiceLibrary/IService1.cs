@@ -12,7 +12,7 @@ namespace WcfServiceLibrary
     public interface IService1
     {
         [OperationContract]
-        string GetData(string value);
+        string GetData(string input1,string input2);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

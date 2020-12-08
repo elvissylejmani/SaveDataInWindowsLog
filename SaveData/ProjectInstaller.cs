@@ -15,5 +15,10 @@ namespace SaveData
         {
             InitializeComponent();
         }
+
+        private void SaveData_AfterInstall(object sender, InstallEventArgs e)
+        {
+
+        }
     }
 }

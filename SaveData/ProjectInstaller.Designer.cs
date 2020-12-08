@@ -41,6 +41,8 @@ namespace SaveData
             // SaveData
             // 
             this.SaveData.ServiceName = "SaveData";
+            this.SaveData.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.SaveData.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.SaveData_AfterInstall);
             // 
             // ProjectInstaller
             // 

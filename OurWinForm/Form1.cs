@@ -24,8 +24,8 @@ namespace OurWinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-           client.GetData(textBox1.Text);
-           client.GetData(textBox2.Text);
+           client.GetData(textBox1.Text, textBox2.Text);
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
